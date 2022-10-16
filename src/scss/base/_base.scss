@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include carbon-fibre-bg-pattern;
+    padding: 4rem 5rem;
+
+    @media only screen and (max-width:  $bp-largest) {
+    padding: 0;
+    max-width: 100%;
+}
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+span, .gold-color{
+    font-family: 'Times New Roman',serif;
+    letter-spacing: 5px;
+    font-weight: bold;
+    background-image: linear-gradient(
+     to right,
+     #cb9b51 0,
+     #cb9b51 22%, 
+     #f6e27a 45%,
+     #f6f2c0 50%,
+     #f6e27a 55%,
+     #cb9b51 78%,
+     #cb9b51 100%
+     );
+    color:transparent;
+    -webkit-background-clip:text;
+ 
+ }
+
+
+

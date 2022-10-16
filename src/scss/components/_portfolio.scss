@@ -1,0 +1,126 @@
+.portfolio {
+    padding-top: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+
+    &__portfo{
+        text-align: center;
+    }
+}
+
+.project {
+    margin-top: 1rem;
+    padding: 2rem 2rem;
+    box-shadow: inset 0 0 1rem .4rem rgb(22, 11, 11);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    overflow: scroll;
+    @include gradient-gold-border-1px;
+
+    &__card-wrap {
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+        height: 63.4%;
+
+        @media only screen and (max-width:  $bp-smallest) {
+            width: 17rem;
+            height: 18rem;
+            margin-left: 4.5rem;
+        }
+    }
+
+    &__card {
+        width: 15rem;
+        height: 20rem;
+        @include gradient-gold-border-9px;
+        transition: all .3s;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: inset 0px 0px 5px 3px rgb(0, 0, 0);
+        
+        position: relative;
+
+        @media only screen and (max-width:  $bp-large) {
+            width: 12rem;
+            height: 20rem;
+        }
+
+        @media only screen and (max-width:  $bp-medium) {
+            width: 14rem;
+            height: 18rem;
+        }
+
+        @media only screen and (max-width:  $bp-small) {
+            width: 14rem;
+            height: 18rem;
+        }
+
+        @media only screen and (max-width:  $bp-smallest) {
+            width: 17rem;
+            height: 18rem;
+        }
+
+        &--top {
+            height: 2rem;
+            @include gradient-gold-border-1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            bottom: 16.7%;
+            color: $sondary-color;
+            white-space: nowrap; 
+            text-overflow: "----"; 
+            overflow: hidden;
+        }
+
+        &--mid {
+            overflow: hidden;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+
+        &--bottom {
+            width: 100%;
+            height: 10rem;
+            background: $secondary-bg-color;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        height: 3.2rem;
+        
+
+        &--left {
+            width: 100%;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .4s;
+            
+            &:hover {
+                box-shadow: inset 0px 0px 5px 2px rgb(0, 0, 0);
+            }
+        }
+
+        &--right {
+            width: 100%;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .4s;
+            &:hover {
+                box-shadow: inset 0px 0px 5px 2px rgb(0, 0, 0);
+            }
+        }
+    }
+}

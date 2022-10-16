@@ -1,0 +1,187 @@
+.contact {
+
+    padding-top: 1rem;
+    
+    &__contact-me{
+        padding: .5rem;
+        text-align: center;
+    }
+
+    &__card {
+        margin-top: .5rem;
+        width: 100%;
+        height: 13rem;
+        background: $secondary-bg-color;
+        box-shadow: inset 0px 0px 5px 1px rgb(22, 11, 11);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__option{
+        padding: 1rem;
+        height: 10rem;
+        width: 15rem;
+        text-align: center;
+        line-height: 1.8rem;
+        display: inline-block;
+        box-shadow: 0px 8px 14px rgb(22, 11, 11);
+        @include gradient-gold-border-topbottom-3px;
+        transition: all .7s;
+
+        &:hover > *{
+            transition: all .2s;
+            text-shadow: 0 3px 6px black;
+            color: $sondary-color;
+        }
+
+        &:hover > :first-child {
+            transition: all .2s;
+            transform: scale(1.5);
+            fill: $sondary-color;
+            padding: 2px;
+            cursor: pointer;
+        }
+    }
+    
+    &__option-icon {
+        fill: $parimary-font-color;
+        color: $secondary-bg-color;
+        box-sizing: content-box;
+        display: inline-block;
+        padding: 0 2px;
+    }
+
+    &__item {
+        text-decoration: none;
+        color: $parimary-font-color;
+
+        &:hover {
+         color: $sondary-color;
+        }
+    }
+}
+
+.form-card {
+    margin-top: 1rem;
+    width: 100%;
+    height: 19rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    padding: 1rem 5rem ;
+
+    &__name {
+        padding: .8rem;
+        width: 100%;
+        @include gradient-gold-border-1px;
+        outline: none;
+        color: $parimary-font-color;
+        box-shadow: 0px 3px 5px black;
+        margin: .3rem;
+        transition: all .4s;
+
+        &:focus,
+        &:active,
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active{
+            padding: .8rem;
+            -webkit-box-shadow: 0 0 0 30px #222 inset !important;
+            -webkit-text-fill-color: $parimary-font-color;
+            border: 1px solid $parimary-font-color;
+            outline: none;
+        }
+
+
+    }
+    &__email {
+        padding: .8rem;
+        width: 100%;
+        @include gradient-gold-border-1px;
+        outline: none;
+        color: $parimary-font-color;
+        box-shadow: 0px 3px 5px black;
+        margin: .3rem;
+
+        transition: all .4s;
+
+        &:focus,
+        &:active,
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active{
+            padding: .8rem;
+            -webkit-box-shadow: 0 0 0 30px #222 inset !important;
+            -webkit-text-fill-color: $parimary-font-color;
+            border: 1px solid $parimary-font-color;
+            outline: none;
+        }
+    }
+    &__message {
+        padding: .8rem;
+        width: 100%;
+        @include gradient-gold-border-1px;
+        outline: none;
+        color: $parimary-font-color;
+        box-shadow: 0px 3px 5px black;
+        margin: .3rem;
+
+        transition: all .4s;
+
+        &:focus,
+        &:active,
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active{
+            padding: .8rem;
+            -webkit-box-shadow: 0 0 0 30px #222 inset !important;
+            -webkit-text-fill-color: $parimary-font-color;
+            border: 1px solid $parimary-font-color;
+            outline: none;
+        }
+    }
+}
+
+.btn {
+    padding: .7rem 1rem;
+    color: $parimary-font-color;
+    position: absolute;
+    left: 10.3%;
+    bottom: -3%;
+    @include gradient-gold-border-1px;
+    transition: all .2s;
+
+    &:hover {
+        color: $sondary-color;
+        box-shadow: 0 .3rem .5rem black;
+        transform: translateY(-.2rem);
+    }
+
+    &:active {
+        box-shadow: 0 .1rem .1rem black;
+        transform: translateY(0);   
+    }
+
+    &:focus,
+    &:active,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px #222 inset !important;
+        -webkit-text-fill-color: $parimary-font-color;
+        border: 1px solid $parimary-font-color;
+        outline: none;
+    }
+}

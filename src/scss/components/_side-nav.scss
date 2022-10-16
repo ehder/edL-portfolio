@@ -1,0 +1,99 @@
+.leftside-nav-section {
+    flex: 0 0 24%;
+    font-size: .8rem;
+    box-shadow: inset 0px 0px 5px 3px rgb(0, 0, 0);
+
+    @media only screen and (max-width:  $bp-largest) {
+        flex: 0 0 20%;
+    }
+
+    @media only screen and (max-width:  $bp-small) {
+        font-size: .5rem;
+        flex: 0 0 15%;
+        box-shadow: none;
+    }
+
+
+}
+
+.side-nav {
+    list-style-type: none;
+
+    @media only screen and (max-width:  $bp-small) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    &__item{
+        transition: all 4s;
+        position: relative;
+    }
+
+    &__item::before {
+        content: "";
+        background: linear-gradient($primary-bg-color, $primary-bg-color), 
+        linear-gradient(
+         to right,
+         #462523 0,
+         #cb9b51 22%, 
+         #f6e27a 45%,
+         #f6f2c0 50%,
+         #f6e27a 55%,
+         #cb9b51 78%,
+         #462523 100%
+         );
+        background-origin: padding-box, border-box;
+        background-repeat: no-repeat;
+        border-bottom: 2px solid transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        transform: scaleY(0);
+        transition: cubic-bezier(1,0,.0,1) transform .2s, width .4s;
+
+        @media only screen and (max-width:  $bp-small) {
+            height: 90%;
+            width: 0px;
+        }
+    }
+
+    &__item--active::before{
+        transform: scaleY(1);
+        width: 99%;
+        box-shadow: 0 1px 3px 1px rgb(0, 0, 0);
+
+        @media only screen and (max-width:  $bp-small) {
+            transform: scale(.9);
+            width: 98%;
+        }
+    }
+
+
+    &__link:link,
+    &__link:visited{
+        text-decoration: none;
+        color: var(--color-white);
+        text-transform: uppercase;
+
+        display: block;
+        padding: 1.5rem 1rem;
+        position: relative;
+        z-index: 10;
+
+        display: flex;
+        align-self: center;
+    }
+
+    &__icon{
+        margin-right: 1rem;
+        fill: currentColor;
+        height: 1rem;
+        width: 1rem;
+        color: $parimary-font-color;
+    }
+}
+
