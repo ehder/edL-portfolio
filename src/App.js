@@ -3,26 +3,48 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import SideNav from './components/leftsideNav/SideNav';
 import Main from './components/main/Main';
+import Nav from './components/nav/Nav';
+
+import Quotes from './components/favquotes/Quotes';
+import Window from './components/window/Window';
+
+
+import Demo from './demo-components/Demo';
+import Demo2 from './demo-components/Demo2';
 
 function App() {
   return (
-    <>
-    <div className='container'> 
-        <Header/>
-        <div className='content'>
-            <SideNav/>
-            <Main/>
-        </div>
-    </div>
-
-    {/* <div className='container2'> 
+      <div className='container'>
         
-    </div> */}
+          <div>
+            <Nav/>
+          </div>
+          
+          <div className='main' id='main'> 
+              <Header/>
+              <div className='content'>
+                  <SideNav/>
+                  <Main/>
+              </div>
+          </div>
 
-    <Footer/>
-    </>
+          <div className='quotes' id='quotes'> 
+              <Quotes/>
+          </div>
 
+          <div className='window' id='window'> 
+              <Window/>
+          </div>
 
+          <div className='demo' id='demo'> 
+              <Demo/>
+          </div>
+
+          <div className='footer-section' id='footer'>
+            <Footer/>
+          </div>
+
+      </div>
   );
 }
 

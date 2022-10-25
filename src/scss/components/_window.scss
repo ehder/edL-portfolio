@@ -1,0 +1,74 @@
+.brick-container {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width:  $bp-small) {
+        display: none;
+    }
+}
+
+.brick {
+    perspective: 80rem; //important for card rotate.
+    width: 30rem;
+    height: 30rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width:  $bp-large) {
+        width: 25rem;
+        height: 24rem;
+    
+    }
+
+    @media only screen and (max-width:  $bp-medium) {
+        width: 25rem;
+        height: 24rem;
+    }
+
+
+
+    &:hover &__side--front{
+        transform: rotateY(-120deg);
+        transform-origin: 0px 5px;
+     }
+
+     &:hover &__side--back{
+        transform: rotateY(120deg);
+        transform-origin: 230px 0px
+     }
+
+    background-image: url('../assets/img/picture.jpg');
+    background-size: cover;
+
+    border: 5px solid rgb(58, 58, 58);
+    box-shadow: inset 0 0 1rem .5rem rgb(0, 0, 0);
+
+    &__side{
+        
+        height: 100%;
+        width: 100%;
+        transition: all 1s;
+        
+        &--front{
+            @include gradient-gold-border-3px;
+
+            &__text{
+                text-align: center;
+            }
+
+        }
+
+        &--back{
+            transform: rotateY(0);
+            @include gradient-gold-border-3px;
+        }
+
+
+
+    }
+}

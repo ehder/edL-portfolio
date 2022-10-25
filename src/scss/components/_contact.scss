@@ -16,6 +16,8 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+
     }
 
     &__option{
@@ -28,6 +30,22 @@
         box-shadow: 0px 8px 14px rgb(22, 11, 11);
         @include gradient-gold-border-topbottom-3px;
         transition: all .7s;
+
+        @media only screen and (max-width:  $bp-large) {
+            height: 10rem;
+            width: 14rem;
+        }
+
+        @media only screen and (max-width:  $bp-medium) {
+            height: 11rem;
+            width: 13rem;
+            overflow: hidden;
+        }
+
+        @media only screen and (max-width:  $bp-small) {
+            height: 12rem;
+            width: 10rem;
+        }
 
         &:hover > *{
             transition: all .2s;
@@ -49,12 +67,14 @@
         color: $secondary-bg-color;
         box-sizing: content-box;
         display: inline-block;
-        padding: 0 2px;
+        padding: 2px 2px;
+
     }
 
     &__item {
         text-decoration: none;
         color: $parimary-font-color;
+        ;
 
         &:hover {
          color: $sondary-color;
@@ -161,6 +181,16 @@
     bottom: -3%;
     @include gradient-gold-border-1px;
     transition: all .2s;
+
+    @media only screen and (max-width:  $bp-medium) {
+        left: 13%;
+        bottom: -2%;
+    }
+
+    @media only screen and (max-width:  $bp-small) {
+        left: 16%;
+        bottom: -2%;
+    }
 
     &:hover {
         color: $sondary-color;

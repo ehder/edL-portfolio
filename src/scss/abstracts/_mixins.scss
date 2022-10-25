@@ -28,6 +28,17 @@
     background-size: 25px 25px;
 }
 
+@mixin bricke-bg-pattern {
+    background:    
+    linear-gradient(335deg, $secondary-bg-color 23px, transparent 23px) 0px 2px,
+    linear-gradient(155deg, $secondary-bg-color 23px, transparent 23px)  4px 35px,
+    linear-gradient(335deg, $secondary-bg-color 23px, transparent 23px) 29px 31px,
+    linear-gradient(155deg, $secondary-bg-color 23px, transparent 23px) 34px 6px;
+    background-color: $primary-bg-lighter;
+    background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+    background-size: 54px 60px;
+}
+
 @mixin carbon-bg-pattern {
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,

@@ -46,6 +46,13 @@
     background-repeat: no-repeat; /* this is important */
     border: 5px solid transparent;
 
+    
+    @media only screen and (max-width:  $bp-medium) {
+        width: 2rem;
+        height: 2rem;
+    }
+
+
     &:hover {
         animation: spin .4s infinite;
     }
@@ -60,6 +67,19 @@
         box-sizing: content-box;
         padding: 2px;
         animation: spin 1000s infinite;
+
+        @media only screen and (max-width:  $bp-medium) {
+            display: none;
+        }
+    }
+
+
+    @media only screen and (max-width:  $bp-medium) {
+        padding: 0px;
+    }
+
+    @media only screen and (max-width:  $bp-small) {
+        display: none;
     }
 }
 

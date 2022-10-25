@@ -5,19 +5,19 @@ const Footer = () => {
     <div className='footer'>
       <div className="footer__heptagon">
           <div className="footer__heptagon--box1">
-              <span><a href="/contact" className='footer__item'>contact</a></span>
+            <a href="/contact" className='footer__item'>contact</a>
           </div>
           <div className="footer__heptagon--box2">
-            <span><a href="/portfolio" className='footer__item'>portfolio</a></span>
+            <a href="/portfolio" className='footer__item'>portfolio</a>
           </div>
           <div className="footer__heptagon--box3">
-            <span><a href="/about" className='footer__item'>about</a></span>
+            <a href="/about" className='footer__item'>about</a>
           </div>
-          <div className="footer__heptagon--box4">
-            <span><a href="/profile" className='footer__item'>profile</a></span>
-          </div>
+            <div className="footer__heptagon--box4">
+          <a href="/" className='footer__item'>profile</a>
+            </div>
           <div className="footer__heptagon--box5">
-            <span><a href="/exprience" className='footer__item'>exp</a></span>
+            <a href="/exprience" className='footer__item'>exp</a>
           </div>
       </div>
 

@@ -1,0 +1,24 @@
+.demo-container {
+    height: 100vh;
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    box-shadow: inset 0px 0px 8px .5rem black;
+    color: white;
+}
+
+.circle{
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    background: red;
+}
+
+.square{
+    width: 500px;
+    height: 500px;
+    background: orange;
+}

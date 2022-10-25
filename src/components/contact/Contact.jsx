@@ -31,6 +31,7 @@ const data = [
 ]
 
 const form = useRef();
+const name = React.createRef();
 
 const sendEmail = (e) => {
   e.preventDefault();
@@ -66,7 +67,7 @@ const sendEmail = (e) => {
         <div className="form-card">
           <form className='form' ref={form} onSubmit={sendEmail} >
             <input className='form__name' type="text" name='name' placeholder='Your Name' required/>
-            <input className='form__email' type="email" name ='email' placeholder='Your Email'/>
+            <input className='form__email' type="email" name ='email' placeholder='Your Email' required/>
             <textarea className='form__message' name='message' id='' rows="5" placeholder='Your Message' required></textarea>
             <button type='submit' className='btn'>Send Message</button>
           </form>
