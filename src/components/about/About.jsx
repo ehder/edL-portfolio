@@ -35,7 +35,6 @@ const items = [
 const Card = (props) => {
   return (
     <li className="carousel-card">
-      {/* <span>{props.id}</span> */}
       <img src={props.img} alt="photo" className='carousel-card__img' />
     </li>
   )
@@ -44,6 +43,8 @@ const Card = (props) => {
 const About = () => {
   const [moveClass, setMoveClass] = useState('');
   const [carouselItems, setCarouselItems] = useState(items);
+
+  console.log(carouselItems)
 
   useEffect( ()=> {
     document.documentElement.style.setProperty('--num', carouselItems.length)
@@ -58,18 +59,19 @@ const About = () => {
     setMoveClass('')
   }
   
-  const shiftPrev = (copy) => {
-    let lastcard = copy.pop();
-    copy.splice(0, 0, lastcard);
+  const shiftPrev = (copy) => {  
+    let lastcard = copy.pop();   // remove last index from array
+    copy.splice(0, 0, lastcard); // insert lastcard at index 0
     setCarouselItems(copy);
   }
   
   const shiftNext = (copy) => {
-    let firstcard = copy.shift();
-    copy.splice(copy.length, 0, firstcard);
+    let firstcard = copy.shift(); // remove first index from array
+    copy.splice(copy.length, 0, firstcard); //insert firstcard at last array
     setCarouselItems(copy);
   }
 
+  console.log(carouselItems.map( (t, i) => t.id + i))
 
   return (
     <div className='about'>
@@ -90,13 +92,13 @@ const About = () => {
                     <a onClick={() => setMoveClass('prev')} className="next">
                       <BsFillArrowRightCircleFill className="ui__icons"/>
                     </a>
-                  </div>
+                </div>
                 
-                  <ul onAnimationEnd={handleAnimationEnd} className={`${moveClass} carousel`}>
-                      {carouselItems.map((t, index) => 
-                        <Card key={t.copy + index} icon={t.icon} copy={t.copy} img= {t.img} id={t.id} />
-                      )}
-                  </ul>
+                <ul  onAnimationStart={handleAnimationEnd} className={`${moveClass} carousel`}>
+                    {carouselItems.map((t, index) => 
+                      <Card key={index} img= {t.img} id={t.id} />
+                    )}
+                </ul>
               </div>
             
             </div>

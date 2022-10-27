@@ -46,13 +46,11 @@
 
   
   &.prev {
-    animation-duration: .4s;
-    animation-name: prev;
+    animation: prev .5s ease-in;
   }
   
   &.next {
-    animation-duration: .4s;
-    animation-name: next;
+    animation: next .5s ease-in;
   }
   
   li {
