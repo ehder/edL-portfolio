@@ -14,6 +14,24 @@
     }
   }
 
+  @keyframes next {
+    from {
+      transform:translateX(0px);
+    }
+    to {
+      transform:translateX(calc(0px + var(--cardWidth)));
+    }
+  }
+  
+  @keyframes prev {
+    from {
+      transform:translateX(0px);
+    }
+    to {
+      transform:translateX(calc(0px - var(--cardWidth)));
+    }
+  }
+
 
   // @keyframes outline-circle-spin {
   //   from {

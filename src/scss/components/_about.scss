@@ -8,7 +8,6 @@
     &__section {
         margin: 1rem;
         box-shadow: inset 0 0 1rem .4rem rgb(22, 11, 11);
-        padding: 1rem 0;
         @include gradient-gold-border-1px;
         width: 55rem;
 
@@ -28,83 +27,94 @@
 
 }
 
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1rem 1rem;
-    padding: 1rem 0;
-    // overflow: hidden;
-    // position: absolute;
-    // margin: auto;
 
-    background: linear-gradient($primary-bg-color, $primary-bg-color), 
-    linear-gradient(
-     to right,
-     #462523 0,
-     #cb9b51 22%, 
-     #f6e27a 45%,
-     #f6f2c0 50%,
-     #f6e27a 55%,
-     #cb9b51 78%,
-     #462523 100%
-     );
-    background-origin: padding-box, border-box;
-    background-repeat: no-repeat;
-    border: 3px solid transparent;
+//======================carousel==================================================
+
+.carouselwrapper {
+    overflow: hidden;
+    position:relative;
     
-    box-shadow: 0 0 5px black;
+}
+
+.carousel{
+    width: var(--carouselWidth);
+    margin: 0 0 0 var(--carouselLeftMargin);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+
+  
+  &.prev {
+    animation-duration: .4s;
+    animation-name: prev;
+  }
+  
+  &.next {
+    animation-duration: .4s;
+    animation-name: next;
+  }
+  
+  li {
+    width: calc(var(--cardWidth) - var(--card-margin) * 3);
+  }  
+
+}
+
+.ui{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: calc(100% - var(--card-margin) * 1);
+    justify-content: space-between;
+    padding: var(--card-margin);
+    z-index: 100;
 
 
-    &__item{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
+
+    &__icons {
+      font-size: 2rem;
+      border-radius: 50%;
+      transition: all .4s;
+      box-shadow: 0px 8px 1rem rgba(0,0,0);
+      fill: $primary-bg-light;
+
+      &:hover {
+        fill: $primary-bg-lighter;
+      }
+
+    }
+  
+    a {
+      cursor: pointer;
     }
 
-    &__photo{
-        width: 16rem;
-        height: 12rem;
-        opacity: .5;
-        transition: all .3s;
+}
 
-        background: linear-gradient($primary-bg-color, $primary-bg-color), 
-        linear-gradient(
-         to right,
-         #462523 0,
-         #cb9b51 22%, 
-         #f6e27a 45%,
-         #f6f2c0 50%,
-         #f6e27a 55%,
-         #cb9b51 78%,
-         #462523 100%
-         );
-        background-origin: padding-box, border-box;
-        background-repeat: no-repeat;
-        border: 2px solid transparent;
+.carousel-card {
+    margin: var(--card-margin);
+    padding: 1rem;
 
-        @media only screen and (max-width:  $bp-medium) {
-            width: 12rem;
-            height: 10rem;
-        }
+    width: 26rem;
+    height: 18rem;
+    box-shadow: inset 0 0 .2rem .3rem rgb(2, 2, 2);
+    outline: 5px ridge $secondary-bg-color;
 
-        @media only screen and (max-width:  $bp-small) {
-            width: 9rem;
-            height: 9rem;
-        }
-
-        &:hover {
-            opacity: 1;
-            transform: scale(1.1);
-        }
+    &__img {
+      height: 100%;
+      width: 100%;
+      box-shadow: 0px 0px 15px rgb(7, 7, 7);
+      @include gradient-gold-border-3px;
     }
 }
+
+//========================================================================
+
 
 .detail {
-    padding: 1rem 2rem;
+    padding: 1rem .5rem;
 }
-
 
 .post {
     display: flex;

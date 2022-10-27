@@ -8,10 +8,6 @@ import Nav from './components/nav/Nav';
 import Quotes from './components/favquotes/Quotes';
 import Window from './components/window/Window';
 
-
-import Demo from './demo-components/Demo';
-import Demo2 from './demo-components/Demo2';
-
 function App() {
   return (
       <div className='container'>
@@ -34,10 +30,6 @@ function App() {
 
           <div className='window' id='window'> 
               <Window/>
-          </div>
-
-          <div className='demo' id='demo'> 
-              <Demo/>
           </div>
 
           <div className='footer-section' id='footer'>

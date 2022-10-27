@@ -1,45 +1,40 @@
 import React from 'react'
 
-import portfolio1 from '../../scss/assets/img/pro-img/portfolio-music.jpg';
-import portfolio2 from '../../scss/assets/img/pro-img/portfolio-dictionary.jpg';
-import portfolio3 from '../../scss/assets/img/pro-img/portfolio-note.jpg';
-import portfolio4 from '../../scss/assets/img/pro-img/portfolio-phone.jpg';
-import portfolio5 from '../../scss/assets/img/pro-img/portfolio-todo.jpg';
-import portfolio6 from '../../scss/assets/img/pro-img/portfolio-angularPortfolio.png';
-import portfolio7 from '../../scss/assets/img/pro-img/portfolio-reactPortfolio.png';
+import {projectphoto1, projectphoto2, projectphoto3, projectphoto4, 
+  projectphoto5, projectphoto6, projectphoto7,  } from '../../scss/assets/pictureExport';
 
 const data = [
     {
       id: 1,
-      image: portfolio1,
+      image: projectphoto3,
       title: 'simple music app in andorid (java)',
       github: 'https://github.com/ehder/music-player-app',
       demo: ''
     },
     {
       id: 2,
-      image: portfolio2,
+      image: projectphoto2,
       title: 'simple dictionary app in andorid (java)',
       github: 'https://github.com/ehder/Dictionary',
       demo: ''
     },
     {
       id: 3,
-      image: portfolio3,
+      image: projectphoto4,
       title: 'simple note app in andorid (java)',
       github: 'https://github.com/ehder/MyNote',
       demo: ''
     },
     {
       id: 4,
-      image: portfolio4,
+      image: projectphoto5,
       title: 'simple phone app in andorid (java)',
       github: 'https://github.com/ehder/EPhone',
       demo: ''
     },
     {
       id: 5,
-      image: portfolio5,
+      image: projectphoto7,
       title: 'simple todo app in andorid (java)',
       github: 'https://github.com/ehder/Todoister',
       demo: ''
@@ -47,7 +42,7 @@ const data = [
   
     {
       id: 6,
-      image: portfolio6,
+      image: projectphoto1,
       title: 'simple portfolio website (angular)',
       github: 'https://github.com/ehder/ed-portfolio',
       demo: 'https://simple--portfolio-1.herokuapp.com'
@@ -55,7 +50,7 @@ const data = [
   
     {
       id: 7,
-      image: portfolio7,
+      image: projectphoto6,
       title: 'simple portfolio website (React)',
       github: 'https://github.com/ehder/ed-portfolio',
       demo: 'https://react--portfolio--0.herokuapp.com'
