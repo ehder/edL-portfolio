@@ -71,8 +71,6 @@ const About = () => {
     setCarouselItems(copy);
   }
 
-  console.log(carouselItems.map( (t, i) => t.id + i))
-
   return (
     <div className='about'>
 
